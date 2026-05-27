@@ -19,11 +19,11 @@ jobs:
       run: pip install pyinstaller==5.13.2
 
     - name: Gerar executável
-      run: pyinstaller --onefile --icon=icone.ico meu_script.py
+      run: pyinstaller --onefile --icon=gps.ico gps_atual3.py
 
     - name: Salvar executável
       uses: actions/upload-artifact@v3
       with:
         name: programa
-        path: dist/meu_script.exe
+        path: dist/gps_atual3.exe
 ``
