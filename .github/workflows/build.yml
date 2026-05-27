@@ -1,0 +1,29 @@
+name: Gerar EXE
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Baixar código
+      uses: actions/checkout@v3
+
+    - name: Instalar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.8
+
+    - name: Instalar PyInstaller
+      run: pip install pyinstaller==5.13.2
+
+    - name: Gerar executável
+      run: pyinstaller --onefile --icon=icone.ico meu_script.py
+
+    - name: Salvar executável
+      uses: actions/upload-artifact@v3
+      with:
+        name: programa
+        path: dist/meu_script.exe
+``
