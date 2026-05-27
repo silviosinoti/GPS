@@ -26,4 +26,3 @@ jobs:
       with:
         name: programa
         path: dist/gps_atual3.exe
-``
