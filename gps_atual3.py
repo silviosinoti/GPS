@@ -22,7 +22,7 @@ DISPOSITIVOS = {
 }
 
 MESES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+         "Jul", "Aug", "Sep", "Oct", "Nov ", "Dec"]
 
 
 def enviar_data(ip, data_str):
