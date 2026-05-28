@@ -16,16 +16,16 @@ jobs:
     - name: Instalar Python
       uses: actions/setup-python@v5
       with:
-        python-version: 3.8
+        python-version: 3.8.10
 
     - name: Instalar dependências
-      run: pip install requests
+      run: pip install requests PySimpleGUI
 
     - name: Instalar PyInstaller
       run: pip install pyinstaller==5.13.2
 
     - name: Gerar executável
-      run: pyinstaller --onefile --noconsole gps_atual3.py
+      run: pyinstaller --onefile --icon=çps.ico gps_atual3.py
 
     - name: Salvar executável
       uses: actions/upload-artifact@v4
