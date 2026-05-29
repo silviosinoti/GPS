@@ -25,7 +25,7 @@ jobs:
       run: pip install pyinstaller==5.13.2
 
     - name: Gerar executável
-      run: pyinstaller --onefile --hidden-import PySimpleGUI gps_atual3.py
+      run: pyinstaller --onefile --noconsole --icon=gps.ico --hidden-import PySimpleGUI gps_atual3.py
 
     - name: Salvar executável
       uses: actions/upload-artifact@v4
